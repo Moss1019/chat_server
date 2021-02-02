@@ -18,6 +18,7 @@ public class Main {
 
     private static final ReceiveCallback receiveCallback = args -> {
         AppMessage appMessage = args.getAppMessage();
+        System.out.printf("%s %s%n", appMessage.getType(), appMessage.getData().toString());
         switch (appMessage.getType()) {
             case 1: {
                 ClientMessage msg = (ClientMessage)appMessage.getData();
